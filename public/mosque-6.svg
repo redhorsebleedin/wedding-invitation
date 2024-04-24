@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_4" data-name="Layer 4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 2000 3000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-3);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="613.6" y1="1609.4" x2="661.9" y2="1801.9" gradientTransform="translate(0 564)" gradientUnits="userSpaceOnUse">
+      <stop offset=".2" stop-color="#0046df"/>
+      <stop offset=".6" stop-color="#036fe8"/>
+      <stop offset=".8" stop-color="#058aee"/>
+      <stop offset="1" stop-color="#0695f1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1112.9" y1="1699.2" x2="2000" y2="1699.2" gradientTransform="translate(0 564)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0046df"/>
+      <stop offset=".1" stop-color="#0156e2"/>
+      <stop offset=".3" stop-color="#0371e8"/>
+      <stop offset=".6" stop-color="#0485ed"/>
+      <stop offset=".8" stop-color="#0591f0"/>
+      <stop offset="1" stop-color="#0695f1"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="1894.5" y1="1814.2" x2="1912.6" y2="1563.9" gradientTransform="translate(0 564)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0299e2"/>
+      <stop offset=".2" stop-color="#027bd0"/>
+      <stop offset=".4" stop-color="#0360c1"/>
+      <stop offset=".6" stop-color="#034cb5"/>
+      <stop offset=".8" stop-color="#0340af"/>
+      <stop offset="1" stop-color="#043dad"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="1085.7" y1="1609.8" x2="1098.8" y2="1896.3" gradientTransform="translate(0 564)" gradientUnits="userSpaceOnUse">
+      <stop offset=".2" stop-color="#0061e9"/>
+      <stop offset=".3" stop-color="#0a8bf0"/>
+      <stop offset=".5" stop-color="#13b0f6"/>
+      <stop offset=".7" stop-color="#19cbfb"/>
+      <stop offset=".9" stop-color="#1ddbfe"/>
+      <stop offset="1" stop-color="#1fe1ff"/>
+    </linearGradient>
+  </defs>
+  <polygon class="cls-1" points="360.2 2217.6 439.4 2232.5 671.1 2225 915.5 2253.9 363.7 2300.5 360.2 2217.6"/>
+  <path class="cls-3" d="M2000,2108v310.5l-53.4-3h-.5s-38.9-2.2-38.9-2.2l-49.9-2.8-20.5-1.1-35.3-2h0l-4.5-.2h0l-20.8-1.2-59.7-3.3h0l-5.9-.3-61.7-3.4-39.2-2.2-19.4-1.1-7.7-.4h-.7s-9-.5-9-.5h-.5s-20.2-1.2-20.2-1.2l-3-.2-14-.8-6.8-.4-6.9-.4-9.3-.5-19.9-1.1-31.1-1.7h-2.3c0-.1,0-.1,0-.1h-2.4c0-.1-187.4-10.6-187.4-10.6l-21.2-1.2-20.9-1.2-113.9-6.4,20.7-31.2,25.1-37.9,3.3-5,5.6-8.4,21.9-33.2.8-1.3,19-4.5,4.1-1,7.6-1.8h43.9l11.2-2,1.7-.3,23.4-4.1,14.6-2.6,4.7-.8,11.2-2,1.9-.3,6.7-1.2,5.1-.9,19.8-3.5,10.4-1.9,27,2.6,6.1.6,7.2.7h0l33.8,3.3h0l19.1-4.7,26.9-6.6,2.2-.5,8.9-2.2,2.3-.6,6.1,1.2,12.4,2.6,6.8,1.4,20.8,4.3,32.9,6.8,16.7,3.4s2.4-.6,6.7-1.7c5.2-1.4,13.1-3.5,23.1-6.5,7.9-2.3,17-5.2,27.2-8.6,1.5-.5,3-1,4.5-1.5h0c7.5-2.5,15.5-5.4,23.8-8.5,1.8-.7,3.7-1.4,5.6-2.1,12.9-4.9,26.5-10.4,40.4-16.6,0,0,0,0,0,0,2.1-.9,4.2-1.9,6.2-2.8,9.2-4.2,18.5-8.6,27.8-13.4,4.4-2.2,8.8-4.5,13.1-6.9.3-.1.6-.3.8-.4,3.1-1.7,6.2-3.4,9.3-5.2,13.6-7.7,26.9-16.1,39.6-25.1,5.2-3.7,10.2-7.4,15.2-11.3,1.5-1.2,3-2.4,4.5-3.6,1-.8,1-.8,0,0,2.7-2.2,5.4-4.5,8-6.7h.3c2.7,0,5.4-.1,8-.1h0c72.3-1.3,118.2.2,118.2.2l12.8-8.4h0s0,0,0,0Z"/>
+  <path class="cls-4" d="M2000,2108v275.1c-1.4-.6-2.8-1.2-4.3-1.8h0s0,0-.1,0c-15.8-6.5-36.2-15-58.1-24.6h0s0,0,0,0c-3-1.3-6.1-2.7-9.2-4-12.4-5.5-25.2-11.3-37.7-17.2-12.5-5.9-24.8-12.1-36.3-18.2-25.8-13.8-47.5-27.5-58.5-39.6,2.2-1.5,4.3-3.2,6.3-5.1,9.5-8.6,17.6-20.7,24.5-34.4,0,0,0,0,0,0,2.9-5.7,5.6-11.7,8-17.9,6.3-15.9,11.3-32.7,15.2-48.1,2.8-11,4.9-21.3,6.6-30,2.6-13.7,3.8-23.3,4.1-25.5,0-.3,0-.5,0-.5h.3c2.7,0,5.4-.1,8-.1h0c72.3-1.3,118.2.2,118.2.2l12.8-8.4h0Z"/>
+  <path class="cls-2" d="M672.2,2354.9l236.3-17.9-510.4-7,13.8-66s564.5-13.6,694-11.1c129.5,2.5,558.8-10.7,679.1,16.5l-34.7,71.5-464.8,75.4-377,80-146.4-35.7-101.2-58.3,11.3-47.4h0Z"/>
+</svg>
