@@ -447,14 +447,6 @@ video {
 }
 
 @font-face {
-  font-family: oceanwide;
-
-  font-weight: 400;
-
-  src: url(/public/oceanwide.otf) format("otf");
-}
-
-@font-face {
   font-family: Proxima Nova;
 
   font-weight: 500;

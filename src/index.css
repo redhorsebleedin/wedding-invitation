@@ -5,6 +5,27 @@
 @font-face {
   font-family: oceanwide;
   src: url(/oceanwide.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: oceanwide;
+  src: url(/Oceanwide-SemiboldOblique.otf);
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: oceanwide;
+  src: url(/oceanwide-regular.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: oceanwide;
+  src: url(/oceanwide-oblique.woff2);
+  font-weight: 400;
+  font-style: italic;
 }
 
 @layer base {
