@@ -48,7 +48,7 @@ const LocationSection = () => {
   const buttonY = useTransform(scrollYProgress, [0.56, 0.63], [10, 0]);
   return (
     <motion.div
-      className="h-[4000px] w-full relative sm:z-0 -z-10 -mt-[600px] pt-[600px]"
+      className="h-[4000px] w-[400px] mx-auto relative -mt-[600px] pt-[640px]"
       ref={ref}
     >
       <div className="w-full h-[800px] sticky top-0">
@@ -103,9 +103,7 @@ const LocationSection = () => {
             <Location progress={scrollYProgress} />
           </motion.div>
           <div className="flex flex-1 flex-col items-center mt-6 text-[30px] text-[#29296d] font-bold px-6">
-            <motion.p style={{ opacity: p1Opacity, y: p1Y }}>
-              Will be held at
-            </motion.p>
+            <motion.p style={{ opacity: p1Opacity, y: p1Y }}>Lokasi</motion.p>
             <motion.div
               style={{
                 scaleX: div2ScaleX,
@@ -114,23 +112,24 @@ const LocationSection = () => {
             >
               <motion.p
                 style={{ opacity: p2Opacity, y: p2Y }}
-                className="text-[#29296d] font-bold py-6 px-4 text-[20px] text-center leading-5"
+                className="text-[#29296d] font-bold py-6 px-4 text-[20px] text-center leading-6"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                vero, nam quo consequatur veniam ipsa quidem voluptates iure
+                Aula Masjid Al-Abror
+                <br /> Jl. H. Abdul Syukur Padasuka, Cimahi
               </motion.p>
             </motion.div>
-            <motion.div
+            <motion.a
+              href="google.com"
               style={{
                 scaleY: div3ScaleY,
                 opacity: div3ScaleY,
               }}
               className="w-1/2 rounded-3xl bg-[#df3708] mt-20 origin-[100%_0] text-[20px] text-white py-6 text-center"
             >
-              <motion.button style={{ opacity: buttonOpacity, y: buttonY }}>
-                View on map
-              </motion.button>
-            </motion.div>
+              <motion.p style={{ opacity: buttonOpacity, y: buttonY }}>
+                Lihat di map
+              </motion.p>
+            </motion.a>
           </div>
         </div>
       </div>

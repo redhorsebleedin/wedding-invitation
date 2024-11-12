@@ -19,32 +19,32 @@ export default function ZoomParallax() {
 
   const pictures = [
     {
-      src: "/couple-bg.jpg",
+      src: "/6.jpg",
       scale: scale4,
       className: "w-[200px]",
     },
     {
-      src: "/couple1.jpg",
+      src: "/1.jpg",
       scale: scale5,
       className: "-top-[230px] left-[60px] w-[120px]",
     },
     {
-      src: "/couple2.jpg",
+      src: "/2.jpg",
       scale: scale6,
       className: "-top-[150px] -left-[90px] w-[150px]",
     },
     {
-      src: "/couple3.jpg",
+      src: "/3.jpg",
       scale: scale8,
       className: "-top-[50px] left-[120px] w-[130px]",
     },
     {
-      src: "/couple4.jpg",
+      src: "/4.jpg",
       scale: scale6,
-      className: "top-[120px] left-[25px] w-[140px]",
+      className: "top-[200px] left-[25px] w-[140px]",
     },
     {
-      src: "/couple5.jpg",
+      src: "/5.jpg",
       scale: scale5,
       className: "top-[50px] -left-[120px] w-[120px]",
     },

@@ -1,11 +1,5 @@
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-} from "framer-motion";
-import { useRef } from "react";
-import Layer from "./Layer";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
 import Line5 from "./svg/Line5";
 
 const DateSection = () => {
@@ -14,10 +8,6 @@ const DateSection = () => {
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end end"],
-  });
-
-  useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    console.log("Page scroll: ", latest);
   });
 
   const wrapperBg = useTransform(
@@ -49,56 +39,28 @@ const DateSection = () => {
   const revealDivX1 = useTransform(scrollYProgress, [0.3, 1], [0, 260]);
   const revealDivX2 = useTransform(scrollYProgress, [0.3, 1], [0, -260]);
 
+  const isInView = useInView(ref, {
+    amount: 0.5,
+  });
+
+  useEffect(() => {
+    console.log(isInView);
+  }, [isInView]);
+
   return (
-    <motion.div
-      className="h-[2000px] w-full relative sm:z-0 -z-10 sm:-mt-[80px] -mt-[100px]"
-      ref={ref}
-    >
+    <motion.div className="h-[2000px] w-[400px] mx-auto relative sm:z-0 -z-10 sm:-mt-[80px] -mt-[100px]">
       <div className="w-full h-[700px] sticky top-0 overflow-x-clip">
-        <motion.div>
-          <Layer speed={100} className="absolute w-28 -z-10 right-10 -top-20">
-            <img src="/images/leaf4.svg" className="rotate-[160deg]" />
-          </Layer>
-          <Layer speed={200} className="absolute w-28 -z-10 left-10 -top-24">
-            <img src="/images/leaf10.svg" className="rotate-[160deg]" />
-          </Layer>
-          <Layer speed={150} className="absolute w-28 -z-10 right-20 -top-7">
-            <img src="/images/leaf12.svg" className="rotate-[160deg]" />
-          </Layer>
-          <Layer speed={250} className="absolute w-16 -z-10 left-32 -top-7">
-            <img src="/images/leaf7.svg" className="rotate-[160deg]" />
-          </Layer>
-          <Layer speed={300} className="absolute w-28 -z-10 right-5 -top-7">
-            <img src="/images/leaf9.svg" className="rotate-[160deg]" />
-          </Layer>
-          <Layer speed={350} className="absolute w-16 -z-10 left-5 -top-7">
-            <img src="/images/leaf5.svg" className="rotate-[160deg]" />
-          </Layer>
-        </motion.div>
         <Line5 progress={scrollYProgress} />
-        <div className="pt-[150px] opacity-[0.99] flex flex-1 flex-col items-center h-full">
-          <motion.div
-            className="overflow-hidden text-[30px] font-bold px-4 py-2 rounded-3xl"
-            style={{ backgroundColor: div1Opacity }}
-          >
-            <motion.p style={{ y: p1Y, color: p1Color }}>
-              Save the date
-            </motion.p>
+        <div
+          className="pt-[100px] flex flex-1 flex-col items-center h-full"
+          ref={ref}
+        >
+          <motion.div className="bg-[#df3708] w-5/6 p-4 rounded-t-[30px]">
+            asdasd
           </motion.div>
-          <div className="w-3/4 font-bold mt-20 py-8 text-center text-[#29296d] leading-10 relative overflow-visible">
-            <motion.div
-              className="absolute bg-[url(/couple1.jpg)] w-[300px] h-[400px] bg-cover -top-4 left-0 rounded-xl"
-              style={{ rotate: revealDiv2, x: revealDivX2 }}
-            ></motion.div>
-            <motion.div
-              className="absolute bg-[url(/couple-bg.jpg)] w-[300px] h-[400px] bg-cover -top-4 right-0 rounded-xl"
-              style={{ rotate: revealDiv1, x: revealDivX1 }}
-            ></motion.div>
-            <p className="text-[20px] mb-4">Sabtu</p>
-            <p className="text-[60px]">21</p>
-            <p className="text-[40px] font-normal">Desember</p>
-            <p className="text-[30px]">2024</p>
-          </div>
+          <motion.div className="bg-[#fa673e] w-5/6 p-4 rounded-b-[30px]">
+            asdasd
+          </motion.div>
         </div>
       </div>
     </motion.div>
