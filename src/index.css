@@ -4,27 +4,27 @@
 
 @font-face {
   font-family: oceanwide;
-  src: url(/oceanwide.otf);
+  src: url(/arizona-regular.woff);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: oceanwide;
+  src: url(/arizona-bold.woff);
   font-weight: 700;
 }
 
 @font-face {
   font-family: oceanwide;
-  src: url(/Oceanwide-SemiboldOblique.otf);
-  font-weight: 700;
+  src: url(/arizona-italic.woff);
+  font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: oceanwide;
-  src: url(/oceanwide-regular.woff2);
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: oceanwide;
-  src: url(/oceanwide-oblique.woff2);
-  font-weight: 400;
+  src: url(/arizona-bolditalic.woff);
+  font-weight: 700;
   font-style: italic;
 }
 

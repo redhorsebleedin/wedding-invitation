@@ -17,19 +17,8 @@ const LocationSection = () => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end end"],
+    offset: ["center end", "end start"],
   });
-
-  const wrapperBg = useTransform(
-    scrollYProgress,
-    [0, 0.1, 0.8, 1],
-    [
-      "rgba(255, 205, 0, 0)",
-      "rgba(255, 205, 0, 0)",
-      "rgba(255, 205, 0, 0)",
-      "rgba(255, 205, 0, 0.1)",
-    ]
-  );
 
   const div1Opacity = useTransform(scrollYProgress, [0.1, 0.18], [0, 1]);
   const div1Y = useTransform(scrollYProgress, [0.12, 0.2], [0, 10]);
@@ -48,10 +37,11 @@ const LocationSection = () => {
   const buttonY = useTransform(scrollYProgress, [0.56, 0.63], [10, 0]);
   return (
     <motion.div
-      className="h-[4000px] w-[400px] mx-auto relative -mt-[600px] pt-[640px]"
+      className="h-[4000px] w-[400px] mx-auto relative -mt-[1500px] pt-[640px]"
       ref={ref}
+      style={{ clipPath: "inset(0 0 0 0)" }}
     >
-      <div className="w-full h-[800px] sticky top-0">
+      <div className="h-[800px] fixed top-0" style={{ width: "inherit" }}>
         <motion.div style={{ opacity: div2Opacity }}>
           <Layer speed={100} className="absolute w-28 -z-10 right-10 -top-20">
             <img src="/images/leaf4.svg" className="rotate-[160deg]" />
@@ -98,21 +88,21 @@ const LocationSection = () => {
         <div className="pt-[100px] opacity-[0.99]">
           <motion.div
             style={{ opacity: div1Opacity, y: div1Y }}
-            className="w-[100px] h-[100px] rounded-full bg-[#29296d] pt-4 pb-5 mx-auto"
+            className="w-[100px] h-[100px] rounded-full bg-merah pt-4 pb-5 mx-auto"
           >
             <Location progress={scrollYProgress} />
           </motion.div>
-          <div className="flex flex-1 flex-col items-center mt-6 text-[30px] text-[#29296d] font-bold px-6">
+          <div className="flex flex-1 flex-col items-center mt-6 text-[30px] text-black font-bold px-6">
             <motion.p style={{ opacity: p1Opacity, y: p1Y }}>Lokasi</motion.p>
             <motion.div
               style={{
                 scaleX: div2ScaleX,
               }}
-              className="w-full rounded-xl bg-[#ffcd00] mt-4 origin-[0_100%]"
+              className="w-full rounded-xl bg-kuning mt-4 origin-[0_100%]"
             >
               <motion.p
                 style={{ opacity: p2Opacity, y: p2Y }}
-                className="text-[#29296d] font-bold py-6 px-4 text-[20px] text-center leading-6"
+                className="text-white font-bold py-6 px-4 text-[20px] text-center leading-6"
               >
                 Aula Masjid Al-Abror
                 <br /> Jl. H. Abdul Syukur Padasuka, Cimahi
@@ -124,7 +114,7 @@ const LocationSection = () => {
                 scaleY: div3ScaleY,
                 opacity: div3ScaleY,
               }}
-              className="w-1/2 rounded-3xl bg-[#df3708] mt-20 origin-[100%_0] text-[20px] text-white py-6 text-center"
+              className="w-1/2 rounded-3xl bg-kuning mt-20 origin-[100%_0] text-[20px] text-white py-6 text-center"
             >
               <motion.p style={{ opacity: buttonOpacity, y: buttonY }}>
                 Lihat di map

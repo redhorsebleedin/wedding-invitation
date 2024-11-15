@@ -6,6 +6,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import Layer from "./Layer";
+import Signature1 from "./svg/Signature1";
 
 export const GroomBride = () => {
   const ref = useRef(null);
@@ -31,26 +32,26 @@ export const GroomBride = () => {
         className="h-[600px] bg-[url(/groom.jpg)] bg-cover bg-center relative rounded-r-3xl"
         style={{ width: w1 }}
       >
-        <Layer speed={600} className="absolute bottom-[300px] -right-10 w-5/6">
+        <Layer speed={600} className="absolute bottom-[350px] -right-10 w-5/6">
           <motion.div
-            className="font-oceanwide w-full bg-white py-4 px-6 rounded-xl rounded-bl-xl origin-right"
+            className="font-oceanwide w-full bg-[rgba(254,161,21,0.8)] py-4 px-6 rounded-xl rounded-bl-xl origin-right"
             style={{ scaleX: scale1 }}
           >
             <motion.h1
               style={{ opacity: op1 }}
-              className="text-md text-[#df3708] font-extrabold"
+              className="text-md text-white font-extrabold"
             >
               The Groom
             </motion.h1>
             <motion.h1
               style={{ opacity: op1 }}
-              className="text-2xl text-[#29296d] font-extrabold"
+              className="text-2xl text-white font-bold"
             >
               Muhamad Rizal
             </motion.h1>
             <motion.p
               style={{ opacity: op1 }}
-              className="text-md text-[#29296d] font-normal"
+              className="text-md text-white font-normal mt-1"
             >
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
               nihil reprehenderit accusamus inventore sequi
@@ -70,26 +71,26 @@ export const GroomBride = () => {
         className="h-[600px] bg-[url(/groom.jpg)] bg-cover bg-center relative ml-auto mt-10 rounded-l-3xl"
         style={{ width: w2 }}
       >
-        <Layer speed={600} className="absolute bottom-[300px] -left-10 w-5/6">
+        <Layer speed={600} className="absolute bottom-[350px] -left-10 w-5/6">
           <motion.div
-            className="font-oceanwide w-full bg-white py-4 px-6 rounded-xl rounded-br-xl origin-left"
+            className="font-oceanwide w-full bg-[rgba(254,161,21,0.8)] py-4 px-6 rounded-xl rounded-br-xl origin-left"
             style={{ scaleX: scale2 }}
           >
             <motion.h1
               style={{ opacity: op2 }}
-              className="text-md text-[#df3708] font-extrabold"
+              className="text-md text-white font-extrabold"
             >
               The Bride
             </motion.h1>
             <motion.h1
               style={{ opacity: op2 }}
-              className="text-2xl text-[#29296d] font-extrabold"
+              className="text-2xl text-white font-extrabold"
             >
               Hanifa Mutia
             </motion.h1>
             <motion.p
               style={{ opacity: op2 }}
-              className="text-md text-[#29296d] font-normal"
+              className="text-md text-white font-normal"
             >
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
               nihil reprehenderit accusamus inventore sequi

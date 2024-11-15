@@ -9,6 +9,11 @@ export default {
       fontFamily: {
         oceanwide: "oceanwide",
       },
+      colors: {
+        black: "#17190f",
+        kuning: "#ff9d00",
+        merah: "#E06262",
+      },
     },
   },
   plugins: [],

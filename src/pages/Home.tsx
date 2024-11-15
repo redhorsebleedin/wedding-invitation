@@ -17,6 +17,8 @@ import {
 } from "react-icons/hi2";
 import Layer from "../components/Layer";
 import { Link } from "react-router-dom";
+import NoiseCanvas from "../components/NoiseCanvas";
+import FirstSection from "../components/FirstSection";
 
 const Home = () => {
   const ref1 = useRef(null);
@@ -48,17 +50,42 @@ const Home = () => {
   }, []);
 
   const op = useTransform(scrollYProgress2, [0, 0.01], [200, 0]);
+  const skewY = useTransform(
+    scrollYProgress2,
+    [0, 0.2, 0.6, 1],
+    [0, 25, 35, 45]
+  );
   return (
-    <div className="w-[100svw]" ref={ref1}>
+    <div className="w-screen" ref={ref1}>
       <div className="w-full sm:max-w-[600px] sm:shadow-xl sm:m-auto py-2">
+        <div className="h-screen w-full max-w-600px fixed z-50 pointer-events-none">
+          <NoiseCanvas />
+        </div>
+        <div className="h-screen w-full max-w-[600px] fixed z-0 top-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="h-full w-full flex flex-col gap-12 py-20 blur-[7px] will-change-transform opacity-10"
+            style={{ skewY, scaleX: 1.1 }}
+          >
+            <div className="w-2 h-[100vh] bg-black absolute -top-[100px] right-14"></div>
+            <div className="w-full h-10 bg-black -skew-y-[5deg]"></div>
+            <div className="w-full h-10 bg-black -skew-y-[10deg]"></div>
+            <div className="w-full h-10 bg-black -skew-y-[15deg]"></div>
+            <div className="w-full h-10 bg-black -skew-y-[20deg]"></div>
+            <div className="w-full h-10 bg-black -skew-y-[25deg]"></div>
+            <div className="w-full h-10 bg-black -skew-y-[30deg]"></div>
+            <div className="w-full h-10 bg-black -skew-y-[35deg]"></div>
+            <div className="w-full h-10 bg-black -skew-y-[40deg]"></div>
+            <div className="w-full h-10 bg-black -skew-y-[45deg]"></div>
+          </motion.div>
+          <div className="h-full w-1/2 absolute top-0 right-0 bg-gradient-to-l from-black opacity-20 z-0"></div>
+          <div className="h-full w-1/2 absolute top-0 left-0 bg-gradient-to-r from-white opacity-20 rounded-xl z-0"></div>
+        </div>
         <motion.div
-          className="fixed bottom-0 left-0 w-full z-[9999]"
+          className="fixed bottom-0 left-0 w-full sm:left-[50%] sm:translate-x-[-50%] max-w-[600px] m-auto z-[9999]"
           style={{ y: op }}
         >
           <div className="flex flex-row justify-center gap-2">
-            <p className="text-center text-sm mb-2 text-[#29296d]">
-              Scroll pelan-pelan
-            </p>
+            <p className="text-center mb-5 text-black">Scroll pelan-pelan</p>
             <motion.div
               initial={{ y: -2 }}
               animate={{ y: 2 }}
@@ -70,35 +97,6 @@ const Home = () => {
             >
               <HiChevronDown color="#29296d" />
             </motion.div>
-          </div>
-          <div className="rounded-2xl bg-white flex flex-row py-4 mx-2 mb-6 border-[#df3708] items-center justify-center shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px]">
-            <a
-              href="#"
-              className="border-[rgba(223,55,8,0.2)] border-r-[1px] px-5"
-            >
-              <HiOutlineHome color="#29296d" size={32} />
-            </a>
-            <a
-              href="#"
-              className="border-[rgba(223,55,8,0.2)] border-r-[1px] px-5"
-            >
-              <HiOutlineHeart color="#29296d" size={32} />
-            </a>
-            <a
-              href="#"
-              className="border-[rgba(223,55,8,0.2)] border-r-[1px] px-5"
-            >
-              <HiOutlineCalendar color="#29296d" size={32} />
-            </a>
-            <a
-              href="#"
-              className="border-[rgba(223,55,8,0.2)] border-r-[1px] px-5"
-            >
-              <HiOutlineMapPin color="#29296d" size={32} />
-            </a>
-            <Link to="messages" className="px-5">
-              <HiOutlineChatBubbleLeftRight color="#29296d" size={32} />
-            </Link>
           </div>
         </motion.div>
         <motion.div
@@ -119,14 +117,7 @@ const Home = () => {
             Scroll to open the invitation!
           </p>
         </motion.div>
-        <div className="overflow-x-clip">
-          <div className="mt-36 p-8 relative">
-            <RevealingParagraph
-              className="text-[#29296d] text-[40px] text-center font-bold"
-              paragraph="The wedding of Rizal & Hanifa"
-            />
-          </div>
-        </div>
+        <FirstSection />
         <ZoomParallax />
         <div
           ref={ref2}
@@ -148,13 +139,13 @@ const Home = () => {
             <img src="/images/leaf2.svg" className="rotate-180" />
           </Layer>
           <AnimatedParagraph
-            className="text-center px-8"
+            className="text-center text-black font-bold px-8 mt-40 mb-60"
             paragraph='"It is He who created you from one soul and created from it its mate that he might dwell in security with her.” (Quran, 7:189)'
           />
         </div>
         <GroomBride />
         <LocationSection />
-        <DateSection />
+        <div className="bg-[url(/1.jpg)] bg-cover w-full h-[80vh]"></div>
         <div className="h-[200vh]"></div>
       </div>
     </div>
