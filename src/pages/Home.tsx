@@ -130,7 +130,7 @@ const Home = () => {
           className=" bg-[#df3708] fixed top-0 left-0 z-50 origin-[0_100%] w-full h-1"
           style={{ scaleX: scrollYProgress2 }}
         ></motion.div>
-        <motion.div className="rounded-3xl relative h-[700px] w-[400px] mx-auto bg-[url(/bg-hero.png)] bg-center bg-cover text-white px-4 py-8 leading-6 flex flex-col justify-end text-right">
+        <motion.div className="rounded-3xl relative h-[700px] w-[400px] mx-auto bg-[url(/bg-hero.webp)] bg-center bg-cover text-white px-4 py-8 leading-6 flex flex-col justify-end text-right">
           <div className="absolute top-[230px] left-[80px] w-[235px] rotate-[14deg] mix-blend-multiply">
             <video src="/herovideo1.mp4" autoPlay playsInline loop muted />
           </div>
