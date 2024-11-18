@@ -32,12 +32,12 @@ const LocationSection = () => {
   const p2Opacity = useTransform(scrollYProgress, [0.36, 0.4], [0, 1]);
   const p2Y = useTransform(scrollYProgress, [0.35, 0.42], [10, 0]);
 
-  const div3ScaleY = useTransform(scrollYProgress, [0.5, 0.6], [0, 1]);
-  const buttonOpacity = useTransform(scrollYProgress, [0.58, 0.62], [0, 1]);
-  const buttonY = useTransform(scrollYProgress, [0.56, 0.63], [10, 0]);
+  const div3ScaleY = useTransform(scrollYProgress, [0.5, 0.5], [0, 1]);
+  const buttonOpacity = useTransform(scrollYProgress, [0.52, 0.58], [0, 1]);
+  const buttonY = useTransform(scrollYProgress, [0.52, 0.58], [10, 0]);
   return (
     <motion.div
-      className="h-[4000px] w-[400px] mx-auto relative -mt-[1500px] pt-[640px]"
+      className="h-[4000px] w-[400px] mx-auto relative -mt-[1500px] pt-[640px] z-10"
       ref={ref}
       style={{ clipPath: "inset(0 0 0 0)" }}
     >
@@ -83,43 +83,52 @@ const LocationSection = () => {
         </motion.div>
         <Line progress={scrollYProgress} />
         <Line2 progress={scrollYProgress} />
-        <Line3 progress={scrollYProgress} />
-        <Line4 progress={scrollYProgress} />
+        {/* <Line3 progress={scrollYProgress} /> */}
+        {/* <Line4 progress={scrollYProgress} /> */}
         <div className="pt-[100px] opacity-[0.99]">
           <motion.div
             style={{ opacity: div1Opacity, y: div1Y }}
-            className="w-[100px] h-[100px] rounded-full bg-merah pt-4 pb-5 mx-auto"
+            className="w-[100px] h-[100px] rounded-full bg-[#E8DED8] pt-4 pb-5 mx-auto"
           >
             <Location progress={scrollYProgress} />
           </motion.div>
-          <div className="flex flex-1 flex-col items-center mt-6 text-[30px] text-black font-bold px-6">
-            <motion.p style={{ opacity: p1Opacity, y: p1Y }}>Lokasi</motion.p>
+          <div className="flex flex-1 flex-col items-center mt-6 text-[30px] text-white px-6">
+            {/* <motion.p style={{ opacity: p1Opacity, y: p1Y }}>
+              Lokasi Acara
+            </motion.p> */}
+            <div className="h-10"></div>
             <motion.div
               style={{
                 scaleX: div2ScaleX,
               }}
-              className="w-full rounded-xl bg-kuning mt-4 origin-[0_100%]"
+              className="w-full rounded-xl bg-merah mt-4 origin-[0_100%]"
             >
               <motion.p
                 style={{ opacity: p2Opacity, y: p2Y }}
-                className="text-white font-bold py-6 px-4 text-[20px] text-center leading-6"
+                className="text-white pt-6 pb-6 px-4 text-center leading-6 opacity-30"
               >
-                Aula Masjid Al-Abror
-                <br /> Jl. H. Abdul Syukur Padasuka, Cimahi
+                <span className="font-bold text-2xl">Lokasi Acara</span>
+                <br />
+                <span className="text-lg leading-3">
+                  Aula Masjid Al-Abror
+                  <br /> Jl. H. Abdul Syukur, Padasuka, Cimahi
+                </span>
               </motion.p>
+              <motion.a
+                href="google.com"
+                style={{
+                  opacity: div3ScaleY,
+                }}
+                className="w-1/2 rounded-3x origin-[100%_0] text-[20px]"
+              >
+                <motion.p
+                  style={{ opacity: buttonOpacity, y: buttonY }}
+                  className="text-white text-center border-[1px] border-white p-4 mx-20 rounded-2xl mb-6"
+                >
+                  Lihat di map
+                </motion.p>
+              </motion.a>
             </motion.div>
-            <motion.a
-              href="google.com"
-              style={{
-                scaleY: div3ScaleY,
-                opacity: div3ScaleY,
-              }}
-              className="w-1/2 rounded-3xl bg-kuning mt-20 origin-[100%_0] text-[20px] text-white py-6 text-center"
-            >
-              <motion.p style={{ opacity: buttonOpacity, y: buttonY }}>
-                Lihat di map
-              </motion.p>
-            </motion.a>
           </div>
         </div>
       </div>

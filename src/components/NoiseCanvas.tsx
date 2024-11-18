@@ -42,7 +42,7 @@ const NoiseCanvas = () => {
 
       loopTimeout = window.setTimeout(() => {
         window.requestAnimationFrame(loop);
-      }, 1000 / 1);
+      }, 1000 / 24);
     };
 
     const setup = () => {
@@ -73,7 +73,7 @@ const NoiseCanvas = () => {
 
     // Init
     setup();
-    reset();
+    // reset();
 
     // Cleanup on component unmount
     return () => {
@@ -86,7 +86,7 @@ const NoiseCanvas = () => {
     <canvas
       ref={canvasRef}
       id="noise"
-      className="w-full h-[100lvh] opacity-5 absolute top-0 left-0"
+      className="w-full h-[100lvh] opacity-[0.08] absolute top-0 left-0"
     />
   );
 };

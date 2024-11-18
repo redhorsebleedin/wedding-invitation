@@ -59,7 +59,7 @@ export default function ZoomParallax() {
               key={index}
               style={{ scale }}
               className={classNames(
-                "w-full h-full top-0 absolute flex items-center justify-center"
+                "w-full h-full top-0 absolute flex items-center justify-center will-change-transform"
               )}
             >
               <div className={classNames("relative", className)}>

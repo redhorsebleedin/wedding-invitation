@@ -32,9 +32,9 @@ export const GroomBride = () => {
         className="h-[600px] bg-[url(/groom.jpg)] bg-cover bg-center relative rounded-r-3xl"
         style={{ width: w1 }}
       >
-        <Layer speed={600} className="absolute bottom-[350px] -right-10 w-5/6">
+        <Layer speed={600} className="absolute bottom-[250px] left-0 w-5/6">
           <motion.div
-            className="font-oceanwide w-full bg-[rgba(254,161,21,0.8)] py-4 px-6 rounded-xl rounded-bl-xl origin-right"
+            className="font-oceanwide w-full py-4 px-6 rounded-xl rounded-bl-xl origin-right"
             style={{ scaleX: scale1 }}
           >
             <motion.h1
@@ -71,9 +71,9 @@ export const GroomBride = () => {
         className="h-[600px] bg-[url(/groom.jpg)] bg-cover bg-center relative ml-auto mt-10 rounded-l-3xl"
         style={{ width: w2 }}
       >
-        <Layer speed={600} className="absolute bottom-[350px] -left-10 w-5/6">
+        <Layer speed={600} className="absolute bottom-[280px] left-0 w-5/6">
           <motion.div
-            className="font-oceanwide w-full bg-[rgba(254,161,21,0.8)] py-4 px-6 rounded-xl rounded-br-xl origin-left"
+            className="font-oceanwide w-full py-4 px-6 rounded-xl rounded-br-xl origin-left"
             style={{ scaleX: scale2 }}
           >
             <motion.h1

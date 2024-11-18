@@ -11,6 +11,11 @@ const FirstSection = () => {
 
   const y1 = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.5], [50, 0, 0, 0]);
   const op1 = useTransform(scrollYProgress, [0.1, 0.2, 0.4, 0.5], [0, 1, 1, 0]);
+  const scale1 = useTransform(
+    scrollYProgress,
+    [0.1, 0.2, 0.4, 0.5],
+    [0.98, 1, 1, 0.98]
+  );
   // const y2 = useTransform(scrollYProgress, [0.65, 0.75, 0.9, 1], [50, 0, 0, 0]);
   const op2 = useTransform(
     scrollYProgress,
@@ -29,17 +34,23 @@ const FirstSection = () => {
       ref={ref}
       style={{ clipPath: "inset(0 0 0 0)" }}
     >
-      <div className="fixed top-[35%] -z-10 text-center w-full">
+      <div
+        className="fixed top-[35%] left-0 -z-10 text-center"
+        style={{ width: "inherit" }}
+      >
         <motion.h1
           className="text-4xl text-center font-bold will-change-transform"
-          style={{ y: y1, opacity: op1 }}
+          style={{ y: y1, opacity: op1, scale: scale1 }}
         >
           The wedding of
           <br />
           <motion.span style={{ color }}>Rizal and Hanifa</motion.span>
         </motion.h1>
       </div>
-      <div className="fixed top-[35%] -z-10 text-center w-full">
+      <div
+        className="fixed top-[35%] left-0 -z-10 text-center"
+        style={{ width: "inherit" }}
+      >
         <motion.h1
           className="text-4xl text-center font-bold will-change-transform"
           style={{ opacity: op2 }}
