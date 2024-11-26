@@ -1,10 +1,10 @@
 import { motion, useTransform } from "framer-motion";
 
 const Line4 = ({ progress }) => {
-  const pathLength = useTransform(progress, [0.7, 1], [0, 1.1]);
+  const pathLength = useTransform(progress, [0.6, 0.9], [0, 1.1]);
 
   return (
-    <svg viewBox="0 0 400 800" className="absolute -z-10 -mt-32 opacity-20">
+    <svg viewBox="0 0 400 800" className="absolute -z-10 -mt-44 opacity-20">
       <g transform="matrix(0 1 -1 0 400 -0)">
         <motion.path
           style={{ pathLength }}

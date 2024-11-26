@@ -21,7 +21,7 @@ const DateSection = () => {
   const h1 = useTransform(
     scrollYProgress,
     [0.05, 0.1, 0.2, 0.25],
-    [0, 400, 400, 0]
+    [0, 180, 180, 0]
   );
 
   const op2 = useTransform(
@@ -32,7 +32,7 @@ const DateSection = () => {
   const h2 = useTransform(
     scrollYProgress,
     [0.25, 0.3, 0.4, 0.45],
-    [0, 180, 180, 0]
+    [0, 100, 100, 0]
   );
 
   const op3 = useTransform(
@@ -62,54 +62,18 @@ const DateSection = () => {
               className="w-full flex flex-row justify-center items-center gap-4 font-bold"
               style={{ opacity: op1 }}
             >
-              <h1>Waktu Acara</h1>
-              <BiSolidCalendarHeart color="#17190f" size={50} />
-            </motion.div>
-            <motion.div
-              className="w-full flex flex-col items-center rounded-3xl font-bold overflow-hidden"
-              style={{ height: h1 }}
-            >
-              <div className="flex flex-col justify-center items-center w-full rounded-3xl font-bold overflow-hidden py-4 px-20">
-                <h1 className="text-2xl border-b-[1px] border-[rgba(23,25,15,0.3)] pb-2 mb-2 text-kuning">
-                  Akad
-                </h1>
-                <h1 className="text-xl font-normal opacity-60">
-                  <span className="text-black">Sabtu,</span>
-                  <br />
-                  21 Desember 2024
-                  <br />
-                  07.30 - 10.00
-                </h1>
-                <h1 className="text-black opacity-50 my-6">&#x2022;</h1>
-                <h1 className="text-2xl border-b-[1px] border-[rgba(23,25,15,0.3)] pb-2 mb-2 text-merah">
-                  Resepsi
-                </h1>
-                <h1 className="text-xl font-normal opacity-60">
-                  <span className="text-black">Sabtu,</span>
-                  <br />
-                  21 Desember 2024
-                  <br />
-                  11.00 - 13.00
-                </h1>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="w-full flex flex-row justify-center items-center gap-4 font-bold"
-              style={{ opacity: op2 }}
-            >
               <h1>Kirim Hadiah</h1>
               <PiGiftBold color="#17190f" size={50} />
             </motion.div>
             <motion.div
               className="w-full flex flex-col justify-center rounded-3xl font-bold overflow-hidden"
-              style={{ height: h2 }}
+              style={{ height: h1 }}
             >
               <div className="flex flex-row items-center justify-center w-full rounded-3xl font-bold overflow-hidden p-4 gap-4">
                 <div className="p-4 flex items-center justify-center rounded-lg bg-[#E8DED8]">
                   <img src="/images/bca.webp" className="w-20 opacity-40" />
                 </div>
-                <div className="flex flex-col justify-center items-start text-lg w-1/2 text-left leading-6 gap-2 opacity-60 font-normal">
+                <div className="flex flex-col flex-3 justify-center items-start text-lg text-left leading-6 gap-2 opacity-60 font-normal">
                   <p className="border-b-[1px] border-[rgba(23,25,15,0.3)] pb-2">
                     <span className="font-bold">Muhamad Rizal</span>
                     <br />
@@ -126,14 +90,14 @@ const DateSection = () => {
 
             <motion.div
               className="w-full flex flex-row justify-center items-center gap-4 font-bold"
-              style={{ opacity: op3 }}
+              style={{ opacity: op2 }}
             >
               <h1>Sampaikan Pesan</h1>
               <BsChatHeartFill color="#17190f" size={50} />
             </motion.div>
             <motion.div
               className="w-full rounded-3xl font-bold overflow-hidden"
-              style={{ height: h3 }}
+              style={{ height: h2 }}
             >
               <div className="pt-4">
                 <Link

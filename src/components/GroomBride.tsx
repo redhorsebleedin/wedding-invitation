@@ -6,7 +6,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import Layer from "./Layer";
-import Signature1 from "./svg/Signature1";
+import { RiInstagramFill } from "react-icons/ri";
 
 export const GroomBride = () => {
   const ref = useRef(null);
@@ -27,22 +27,23 @@ export const GroomBride = () => {
   const op2 = useTransform(scrollYProgress, [0.65, 0.7], [0, 1]);
 
   return (
-    <div ref={ref} className="w-full pt-32 overflow-hidden">
+    <div ref={ref} className="w-full pt-32 overflow-hidden relative z-10">
       <motion.div
-        className="h-[600px] bg-[url(/groom.jpg)] bg-cover bg-center relative rounded-r-3xl"
+        className="h-[600px] bg-[url(/images/groom.jpg)] bg-cover bg-center relative rounded-r-3xl"
         style={{ width: w1 }}
       >
-        <Layer speed={600} className="absolute bottom-[250px] left-0 w-5/6">
+        <Layer speed={600} className="absolute bottom-[260px] left-0 w-5/6">
           <motion.div
-            className="font-oceanwide w-full py-4 px-6 rounded-xl rounded-bl-xl origin-right"
+            className="font-oceanwide w-full py-4 px-6 rounded-xl rounded-bl-xl origin-right leading-6"
             style={{ scaleX: scale1 }}
           >
             <motion.h1
               style={{ opacity: op1 }}
               className="text-md text-white font-extrabold"
             >
-              The Groom
+              the groom
             </motion.h1>
+            {/* <h1 className="text-white">&#x2022;</h1> */}
             <motion.h1
               style={{ opacity: op1 }}
               className="text-2xl text-white font-bold"
@@ -51,10 +52,9 @@ export const GroomBride = () => {
             </motion.h1>
             <motion.p
               style={{ opacity: op1 }}
-              className="text-md text-white font-normal mt-1"
+              className="text-md text-white font-normal mb-2"
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
-              nihil reprehenderit accusamus inventore sequi
+              Putra ketiga dari Bapak Zainal Mutakin & Ibu Kurnia
             </motion.p>
           </motion.div>
         </Layer>
@@ -68,7 +68,7 @@ export const GroomBride = () => {
         ></motion.div> */}
       </motion.div>
       <motion.div
-        className="h-[600px] bg-[url(/groom.jpg)] bg-cover bg-center relative ml-auto mt-10 rounded-l-3xl"
+        className="h-[600px] bg-[url(/images/bride.jpg)] bg-cover bg-center relative ml-auto mt-10 rounded-l-3xl"
         style={{ width: w2 }}
       >
         <Layer speed={600} className="absolute bottom-[280px] left-0 w-5/6">
@@ -78,22 +78,21 @@ export const GroomBride = () => {
           >
             <motion.h1
               style={{ opacity: op2 }}
-              className="text-md text-white font-extrabold"
+              className="text-md text-gray-800 font-extrabold"
             >
-              The Bride
+              the bride
             </motion.h1>
             <motion.h1
               style={{ opacity: op2 }}
-              className="text-2xl text-white font-extrabold"
+              className="text-2xl text-gray-800 font-extrabold"
             >
               Hanifa Mutia
             </motion.h1>
             <motion.p
               style={{ opacity: op2 }}
-              className="text-md text-white font-normal"
+              className="text-md text-gray-800 font-normal"
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
-              nihil reprehenderit accusamus inventore sequi
+              Putri bungsu dari Bapak Safrudin & Ibu Juzmaizah
             </motion.p>
           </motion.div>
         </Layer>

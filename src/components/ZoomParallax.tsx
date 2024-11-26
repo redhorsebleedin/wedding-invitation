@@ -1,7 +1,6 @@
 import classNames from "classnames";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import * as styles from "./styles.module.scss";
 
 export default function ZoomParallax() {
   const container = useRef(null);
@@ -10,18 +9,16 @@ export default function ZoomParallax() {
     offset: ["start start", "end end"],
   });
 
-  console.log(styles);
-
-  const scale4 = useTransform(scrollYProgress, [0.01, 1], [1, 2]);
-  const scale5 = useTransform(scrollYProgress, [0.01, 1], [1, 5]);
-  const scale6 = useTransform(scrollYProgress, [0.01, 1], [1, 10]);
+  const scale3 = useTransform(scrollYProgress, [0.01, 0.8], [0.4, 1.1]);
+  const scale5 = useTransform(scrollYProgress, [0.01, 1], [1, 7]);
+  const scale6 = useTransform(scrollYProgress, [0.01, 1], [1, 12]);
   const scale8 = useTransform(scrollYProgress, [0.01, 1], [1, 15]);
 
   const pictures = [
     {
-      src: "/6.jpg",
-      scale: scale4,
-      className: "w-[200px]",
+      src: "/2.jpg",
+      scale: scale3,
+      className: "w-full",
     },
     {
       src: "/1.jpg",
@@ -29,29 +26,29 @@ export default function ZoomParallax() {
       className: "-top-[230px] left-[60px] w-[120px]",
     },
     {
-      src: "/2.jpg",
+      src: "/5.jpg",
       scale: scale6,
-      className: "-top-[150px] -left-[90px] w-[150px]",
+      className: "-top-[150px] -left-[110px] w-[150px]",
     },
     {
-      src: "/3.jpg",
+      src: "/6.jpg",
       scale: scale8,
       className: "-top-[50px] left-[120px] w-[130px]",
     },
     {
       src: "/4.jpg",
       scale: scale6,
-      className: "top-[200px] left-[25px] w-[140px]",
+      className: "top-[150px] left-[25px] w-[200px]",
     },
     {
-      src: "/5.jpg",
+      src: "/3.jpg",
       scale: scale5,
       className: "top-[50px] -left-[120px] w-[120px]",
     },
   ];
 
   return (
-    <div ref={container} className="h-[200vh] relative">
+    <div ref={container} className="h-[200vh] relative z-10">
       <div className="sticky overflow-hidden top-0 h-[100vh]">
         {pictures.map(({ src, scale, className }, index) => {
           return (

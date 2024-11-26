@@ -1,17 +1,5 @@
-import {
-  motion,
-  spring,
-  stagger,
-  useAnimate,
-  useInView,
-  useMotionValueEvent,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "framer-motion";
-import { useEffect, useRef } from "react";
-import Location from "./svg/Location";
-import Map from "./svg/Map";
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
+import { useEffect } from "react";
 
 const WeddingDate = () => {
   // const { scrollYProgress } = useScroll({

@@ -37,7 +37,7 @@ const LocationSection = () => {
   const buttonY = useTransform(scrollYProgress, [0.52, 0.58], [10, 0]);
   return (
     <motion.div
-      className="h-[4000px] w-[400px] mx-auto relative -mt-[1500px] pt-[640px] z-10"
+      className="h-[4000px] w-[400px] mx-auto relative -mt-[1500px] pt-[640px] z-[1] pointer-events-auto"
       ref={ref}
       style={{ clipPath: "inset(0 0 0 0)" }}
     >
@@ -84,7 +84,7 @@ const LocationSection = () => {
         <Line progress={scrollYProgress} />
         <Line2 progress={scrollYProgress} />
         {/* <Line3 progress={scrollYProgress} /> */}
-        {/* <Line4 progress={scrollYProgress} /> */}
+        <Line4 progress={scrollYProgress} />
         <div className="pt-[100px] opacity-[0.99]">
           <motion.div
             style={{ opacity: div1Opacity, y: div1Y }}
@@ -115,11 +115,12 @@ const LocationSection = () => {
                 </span>
               </motion.p>
               <motion.a
-                href="google.com"
+                href="https://maps.app.goo.gl/BbFpfNke99igwToC8"
+                target="_blank"
                 style={{
                   opacity: div3ScaleY,
                 }}
-                className="w-1/2 rounded-3x origin-[100%_0] text-[20px]"
+                className="w-1/2 rounded-3x origin-[100%_0] text-[20px] relative z-30"
               >
                 <motion.p
                   style={{ opacity: buttonOpacity, y: buttonY }}

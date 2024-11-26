@@ -28,7 +28,6 @@ const AnimatedParagraph = ({ progress, paragraph, ...props }) => {
 const Word = ({ children, progress, range }) => {
   const amount = range[1] - range[0];
   const step = amount / children.length;
-  console.log(amount);
   return (
     <span className={styles.word}>
       {children.split("").map((char, i) => {

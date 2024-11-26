@@ -28,8 +28,11 @@
   font-style: italic;
 }
 
+body {
+  touch-action: pan-x pan-y;
+}
+
 @layer base {
-  
   /* @font-face {
     font-family: Proxima Nova;
     font-weight: 500;
