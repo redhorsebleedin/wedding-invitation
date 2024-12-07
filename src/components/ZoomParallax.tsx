@@ -21,11 +21,6 @@ export default function ZoomParallax() {
       className: "w-full",
     },
     {
-      src: "/1.jpg",
-      scale: scale5,
-      className: "-top-[230px] left-[60px] w-[120px]",
-    },
-    {
       src: "/5.jpg",
       scale: scale6,
       className: "-top-[150px] -left-[110px] w-[150px]",

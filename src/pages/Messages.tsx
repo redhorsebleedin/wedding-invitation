@@ -89,7 +89,7 @@ const Messages = () => {
   };
 
   return (
-    <div className="min-w-[400px] h-[100svh] max-w-[600px] m-auto flex flex-col justify-between bg-[rgba(23,25,15,0.8)]">
+    <div className="min-w-[400px] h-[100svh] max-w-[600px] m-auto flex flex-col justify-between bg-[rgba(23,25,15,0.1)]">
       <div className="flex flex-row items-center gap-2 px-4 py-3 bg-white shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] relative z-10">
         <button onClick={() => navigate(-1)}>
           <HiChevronLeft color="#17190f" size={32} />

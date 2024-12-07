@@ -110,12 +110,12 @@ const LocationSection = () => {
                 <span className="font-bold text-2xl">Lokasi Acara</span>
                 <br />
                 <span className="text-lg leading-3">
-                  Aula Masjid Al-Abror
-                  <br /> Jl. H. Abdul Syukur, Padasuka, Cimahi
+                  Gedung Dakwah
+                  <br /> Masjid Agung Cimahi
                 </span>
               </motion.p>
               <motion.a
-                href="https://maps.app.goo.gl/BbFpfNke99igwToC8"
+                href="https://maps.app.goo.gl/nfu9puAvjGDu2NuV9"
                 target="_blank"
                 style={{
                   opacity: div3ScaleY,

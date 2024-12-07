@@ -6,18 +6,17 @@ import {
 } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { HiChevronDown } from "react-icons/hi2";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import "../App.css";
 import AnimatedParagraph from "../components/AnimatedParagraph";
-import DateSection from "../components/DateSection";
 import FirstSection from "../components/FirstSection";
 import { GroomBride } from "../components/GroomBride";
 import Layer from "../components/Layer";
+import Loading from "../components/Loading";
 import LocationSection from "../components/LocationSection";
 import NoiseCanvas from "../components/NoiseCanvas";
-import ZoomParallax from "../components/ZoomParallax";
-import { useLoaderData, useNavigate } from "react-router-dom";
-import Loading from "../components/Loading";
 import Story from "../components/Story";
+import ZoomParallax from "../components/ZoomParallax";
 
 const Home = () => {
   const ref1 = useRef(null);
@@ -37,7 +36,9 @@ const Home = () => {
       navigate("not-found");
     }
     const onPageLoad = () => {
-      setIsLoaded(true);
+      setTimeout(() => {
+        setIsLoaded(true);
+      }, 1200);
     };
 
     if (document.readyState === "complete") {
@@ -49,11 +50,6 @@ const Home = () => {
   }, []);
 
   const op = useTransform(scrollYProgress2, [0, 0.01], [200, 0]);
-  const skewY = useTransform(
-    scrollYProgress2,
-    [0, 0.2, 0.6, 1],
-    [20, 30, 35, 40]
-  );
 
   return (
     <div className="w-screen" ref={ref1}>
@@ -161,25 +157,27 @@ const Home = () => {
                 <img
                   src="/bg-hero.webp"
                   className="rounded-3xl h-full w-full object-cover"
+                  fetchPriority="high"
                 />
               </div>
               <div className="absolute h-full w-full mix-blend-multiply">
                 <video
-                  src="/hevc2.mov"
                   autoPlay
                   playsInline
                   loop
                   muted
                   className="h-full w-full object-cover"
-                />
+                >
+                  <source src="/hevc2.mov" type="video/quicktime" />
+                  <source src="/hero.webm" type="video/webm" />
+                </video>
               </div>
               <div className="flex flex-col items-center w-full text-center relative z-10">
                 <p className="font-thin text-[40px]">
                   Hi {user?.name ?? "Guest"}
                 </p>
-                <p className="font-thin leading-4 mt-4 w-[250px]">
-                  It will be an absolute pleasure if you could witness this
-                  moment
+                <p className="font-thin leading- mt-4 w-[250px]">
+                  Kami mengundang kamu ke acara pernikahan kami!
                 </p>
                 <p className="text-center text-xs opacity-80 mb-6 mt-32">
                   Scroll to open the invitation!

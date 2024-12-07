@@ -4,15 +4,22 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { BsChatHeartFill } from "react-icons/bs";
 import { PiGiftBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import Layer from "./Layer";
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+} from "@headlessui/react";
 
 const Story = () => {
   const ref = useRef(null);
   const ref2 = useRef(null);
+  const [open, setOpen] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -94,7 +101,7 @@ const Story = () => {
         style={{ clipPath: "inset(0 0 0 0)" }}
       >
         <motion.div
-          className="w-full mt-[900px] relative bg-black h-[600px]"
+          className="w-full mt-[900px] relative bg-black h-[600px] sm:h-[800px]"
           style={{ clipPath: "inset(0 0 0 0)" }}
         >
           <Layer speed={2000} className="absolute -top-[1600px]">
@@ -110,11 +117,11 @@ const Story = () => {
         </motion.div>
         <h1 className="text-kuning my-2 text-5xl">&#x2022;</h1>
         <div
-          className="w-full relative bg-black h-[600px]"
+          className="w-full relative bg-black h-[600px] sm:h-[800px]"
           style={{ clipPath: "inset(0 15px 0 15px round 40px)" }}
         >
-          <Layer speed={2000} className="absolute -top-[1650px]">
-            <img src="/images/couple-3.jpg" className="scale-105" />
+          <Layer speed={2000} className="absolute -top-[1650px] sm:-top-[">
+            <img src="/images/couple-3.jpg" className="scale-105 -rotate-1" />
           </Layer>
           <div className="absolute flex flex-col justify-center text-left px-10 pb-4 w-full bg-gradient-to-t from-[rgba(23,25,15,0.7)] z-[6] text-white bottom-0 h-32 leading-5">
             <h1 className="text-3xl font-bold">hubungan &#x2022;</h1>
@@ -160,13 +167,58 @@ const Story = () => {
                 <h1>Sampaikan Pesan</h1>
                 <BsChatHeartFill color="white" size={20} />
               </Link>
-              <Link
-                to="/messages"
+              <button
+                onClick={() => setOpen(true)}
                 className="border-[1px] border-white rounded-xl px-4 py-2 flex flex-row items-center gap-2"
               >
                 <h1>Kirim Hadian</h1>
                 <PiGiftBold color="white" size={20} />
-              </Link>
+              </button>
+              <Dialog open={open} onClose={setOpen} className="relative z-10">
+                <DialogBackdrop
+                  transition
+                  className="fixed inset-0 bg-gray-500/75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in"
+                />
+
+                <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                  <div className="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
+                    <DialogPanel
+                      transition
+                      className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 w-full sm:p-6 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95"
+                    >
+                      <div>
+                        <div className="mt-3 text-center sm:mt-5">
+                          <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow-lg">
+                            <div className="px-4 py-2 sm:px-6 font-bold">
+                              Muhamad Rizal
+                            </div>
+                            <div className="px-4 py-5 sm:p-6">
+                              BCA 1395040805
+                            </div>
+                          </div>
+                          <div className="divide-y mt-4 divide-gray-200 overflow-hidden rounded-lg bg-white shadow-lg">
+                            <div className="px-4 py-2 sm:px-6 font-bold">
+                              Hanifa Mutia
+                            </div>
+                            <div className="px-4 py-5 sm:p-6">
+                              BCA 7940288091
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="mt-5 sm:mt-6">
+                        <button
+                          type="button"
+                          onClick={() => setOpen(false)}
+                          className="inline-flex w-full justify-center rounded-md bg-kuning px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-merah focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                        >
+                          Kembali
+                        </button>
+                      </div>
+                    </DialogPanel>
+                  </div>
+                </div>
+              </Dialog>
             </div>
           </motion.div>
         </div>

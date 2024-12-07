@@ -29,7 +29,7 @@ export const GroomBride = () => {
   return (
     <div ref={ref} className="w-full pt-32 overflow-hidden relative z-10">
       <motion.div
-        className="h-[600px] bg-[url(/images/groom.jpg)] bg-cover bg-center relative rounded-r-3xl"
+        className="h-[600px] sm:h-[800px] bg-[url(/images/groom.jpg)] bg-cover bg-center relative rounded-r-3xl"
         style={{ width: w1 }}
       >
         <Layer speed={600} className="absolute bottom-[260px] left-0 w-5/6">
@@ -68,10 +68,13 @@ export const GroomBride = () => {
         ></motion.div> */}
       </motion.div>
       <motion.div
-        className="h-[600px] bg-[url(/images/bride.jpg)] bg-cover bg-center relative ml-auto mt-10 rounded-l-3xl"
+        className="h-[600px] sm:h-[800px] bg-[url(/images/bride.jpg)] bg-cover bg-center relative ml-auto mt-10 rounded-l-3xl"
         style={{ width: w2 }}
       >
-        <Layer speed={600} className="absolute bottom-[280px] left-0 w-5/6">
+        <Layer
+          speed={600}
+          className="absolute bottom-[280px] sm:bottom-[300px] left-0 w-5/6"
+        >
           <motion.div
             className="font-oceanwide w-full py-4 px-6 rounded-xl rounded-br-xl origin-left"
             style={{ scaleX: scale2 }}
@@ -92,7 +95,7 @@ export const GroomBride = () => {
               style={{ opacity: op2 }}
               className="text-md text-gray-800 font-normal"
             >
-              Putri bungsu dari Bapak Safrudin & Ibu Juzmaizah
+              Putri bungsu dari Bapak Safrudin & Ibu Jusmaizah
             </motion.p>
           </motion.div>
         </Layer>
