@@ -171,7 +171,7 @@ const Story = () => {
                 onClick={() => setOpen(true)}
                 className="border-[1px] border-white rounded-xl px-4 py-2 flex flex-row items-center gap-2"
               >
-                <h1>Kirim Hadian</h1>
+                <h1>Kirim Hadiah</h1>
                 <PiGiftBold color="white" size={20} />
               </button>
               <Dialog open={open} onClose={setOpen} className="relative z-10">
@@ -193,7 +193,7 @@ const Story = () => {
                               Muhamad Rizal
                             </div>
                             <div className="px-4 py-5 sm:p-6">
-                              BCA 1395040805
+                              BCA 1390540805
                             </div>
                           </div>
                           <div className="divide-y mt-4 divide-gray-200 overflow-hidden rounded-lg bg-white shadow-lg">

@@ -231,7 +231,7 @@ const Home = () => {
             </h1>
             <p className="text-white leading-5">
               Sabtu, 21 Desember 2024
-              <br /> 10.00 - 14.00
+              <br /> 11.00 - 14.00
             </p>
           </div>
           <Layer
