@@ -172,9 +172,9 @@ const Home = () => {
                   <source src="/hero.webm" type="video/webm" />
                 </video>
               </div>
-              <div className="flex flex-col items-center w-full text-center relative z-10">
-                <p className="font-thin text-[40px]">
-                  Hi {user?.name ?? "Guest"}
+              <div className="flex flex-col items-center w-full text-center relative px-4 z-10">
+                <p className="font-thin text-[32px] leading-[32px]">
+                  Hi, {user?.name ?? "Guest"}
                 </p>
                 <p className="font-thin leading- mt-4 w-[250px]">
                   Kami mengundang kamu ke acara pernikahan kami!
